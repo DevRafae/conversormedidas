@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor px rem</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header> 
+      <div class="cabeçalho">
+        <h1> Conversor Dev</h1> 
+        <h4> Conversor de pixel e rem </h4>
+      </div>
+    </header>
+  <main>
+    <div class="textFbox">
+      <p>Tamanho de fonte do elemento raiz:</p>
+    </div>
+    <div class="text_space">
+      <input type="number" name="basefontebox" id="fbox">
+    </div>
+    <div class="conversion-direction">
+      <label for="direction">Direção da Conversão:</label>
+      <select name="direction" id="direction">
+        <option value="pxToRem"> px -> rem</option>
+        <option value="remToPx"> rem ->px</option>
+      </select>
+    </div> 
+    <div class="textValuebox">
+      <p id="inputLabel"></p>
+    </div>
+    <div class="text_space">
+      <input type="number" name="valuebox" id="valuebox">
+    </div>
+    <div class="textResultbox">
+      <p id="resultLabel"></p>
+    </div>
+    <div class="text_space">
+      <input type="number" name="resultbox" id="resultbox" readonly>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+
