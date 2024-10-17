@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(1, 1, 26);
+  }
+  
+  .cabeçalho {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.605rem;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 16px;
+    font-style: normal;
+    background: linear-gradient(blue, #2C2255) #800080;
+    color: white; /* Adicionando cor do texto */
+  }
+  h4{
+     position: relative;
+     padding: 30px 0px 0px 0px;
+     margin: 10px;
+     
+  }
+  
+  main {
+    margin: 100px;
+  }
+  
+  .textFbox {
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    font-size: 1.875rem;
+    margin: 0rem 5.625rem;
+  }
+  
+  .text_space {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #fbox {
+    position: relative;
+    align-items: center;
+    margin: 0rem .25rem;
+    padding: 1px;
+    width: 20%;
+    height: 30px;
+    color: black;
+    border-radius: 0.605rem;
+    background-color: whitesmoke;
+      font-size: 16px;
+  }
+  
+  .conversion-direction {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Espaçamento entre o seletor e os campos */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    font-size: 1.5rem;
+  }
+  
+  #direction {
+    margin-left: 10px; /* Espaçamento entre o seletor e o texto */
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(12, 12, 245);
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+  }
+  
+  .textValuebox {
+    display: flex;
+    justify-content: center;
+    font-family: "MuseoModerno", sans-serif;
+    color: aliceblue;
+    font-size: 1.875rem;
+    margin: 0rem 5.625rem;
+  }
+  
+  #valuebox {
+    margin: 0rem 1.25rem;
+    padding: 1px;
+    width: 20%;
+    height: 30px;
+    color: black;
+    border-radius: 0.605rem;
+    background-color: whitesmoke;
+      font-size: 16px;
+  }
+  
+  .textResultbox {
+    display: flex;
+    justify-content: center;
+    font-family: "MuseoModerno", sans-serif;
+  
+    color: yellow;
+    font-size: 1.875rem;
+    margin: 0rem 5.625rem;
+  }
+  
+  #resultbox {
+    margin: 0rem 1.25rem;
+    padding: 1px;
+    width: 20%;
+    height: 30px;
+    color: whitesmoke;
+    border-radius: 0.605rem;
+    border-color: blue;
+    background-color: transparent;
+      font-size: 16px;
+  }
+  
+  .resultado-verde {
+    color: #2ecc71; /* Verde claro */
+  }
+  
