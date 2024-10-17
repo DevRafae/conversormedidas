@@ -15,26 +15,26 @@
     </header>
   <main>
     <div class="textFbox">
-      <p>Tamanho de fonte do elemento raiz:</p>
+      <p>Insira o tamanho da fonte base (em pixels) do seu documento:</p>
     </div>
     <div class="text_space">
       <input type="number" name="basefontebox" id="fbox">
     </div>
     <div class="conversion-direction">
-      <label for="direction">Direção da Conversão:</label>
+      <label for="direction">Escolha a direção da conversão: pixels para rem ou rem para pixels:</label>
       <select name="direction" id="direction">
         <option value="pxToRem"> px -> rem</option>
         <option value="remToPx"> rem ->px</option>
       </select>
     </div> 
-    <div class="textValuebox">
-      <p id="inputLabel"></p>
+    <div class="textValuebox1">
+      <p id="inputLabel">Informe o valor que deseja converter (em pixels ou rem, de acordo com a conversão escolhida)</p>
     </div>
     <div class="text_space">
       <input type="number" name="valuebox" id="valuebox">
     </div>
     <div class="textResultbox">
-      <p id="resultLabel"></p>
+      <p id="resultLabel">O valor convertido aparecerá aqui:</p>
     </div>
     <div class="text_space">
       <input type="number" name="resultbox" id="resultbox" readonly>
@@ -43,4 +43,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
