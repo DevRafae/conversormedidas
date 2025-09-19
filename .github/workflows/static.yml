@@ -1,0 +1,42 @@
+# Nome do seu fluxo de trabalho
+name: Deploy static content to Pages
+
+on:
+  # Roda em pushes para o branch principal
+  push:
+    branches: ["main"] # Se seu branch for 'master', mude aqui
+
+  # Permite que você rode este fluxo manualmente pela aba Actions
+  workflow_dispatch:
+
+# Define as permissões para a Action poder publicar no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite apenas uma publicação por vez
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Tarefa de publicação
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Faz o upload apenas da pasta 'src'
+          path: './src'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
