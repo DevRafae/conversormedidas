@@ -1,0 +1,44 @@
+# Nome do seu fluxo de trabalho. Aparecerá na aba "Actions".
+name: Deploy to GitHub Pages
+
+# Gatilho: Este workflow roda sempre que houver um 'push' no branch 'main'.
+on:
+  push:
+    branches:
+      - main # Mude para 'master' se o seu branch principal tiver esse nome
+
+# Permissões necessárias para a Action poder publicar no GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Tarefas (jobs) que o workflow vai executar.
+jobs:
+  # Tarefa de construção (build) - no nosso caso, é só preparar os arquivos.
+  build:
+    runs-on: ubuntu-latest # Usa um robô com sistema Ubuntu.
+    steps:
+      - name: Checkout repository # 1. Baixa o código do seu repositório.
+        uses: actions/checkout@v4
+
+      - name: Setup Pages # 2. Configura o ambiente para o GitHub Pages.
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact # 3. Faz o upload da pasta 'src' como um "artefato".
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Diz para fazer o upload do conteúdo da pasta 'src'.
+          path: './src'
+
+  # Tarefa de publicação (deploy) - só roda depois que a 'build' for bem-sucedida.
+  deploy:
+    needs: build # Depende da tarefa 'build'.
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # Pega a URL do site.
+    steps:
+      - name: Deploy to GitHub Pages # 4. Publica o artefato no GitHub Pages.
+        id: deployment
+        uses: actions/deploy-pages@v4
