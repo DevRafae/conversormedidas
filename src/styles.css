@@ -15,7 +15,7 @@ body {
     font-family: "Press Start 2P", system-ui;
     font-size: 1.5rem;
     background: linear-gradient(blue, #2C2255);
-    color: #2C2255;
+    color: #f8f7ff;
     padding: 20px;
 }
 
@@ -35,11 +35,13 @@ main {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
     margin: 1rem 0;
+    
 }
 
 .text_space {
     display: flex;
     justify-content: center;
+    color: rgb(144, 47, 47);
 }
 
 input[type="number"], select {
@@ -47,7 +49,7 @@ input[type="number"], select {
     padding: 0.5rem;
     width: 80%;
     height: 40px;
-    color: whitesmoke;
+    color: rgb(144, 47, 47);
     border-radius: 0.605rem;
     background-color: whitesmoke;
     font-size: 1rem;
